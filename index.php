@@ -172,7 +172,7 @@ include 'Entity/PersonalUserEO.php';
 				<div>
                                     <!--asd-->
 					<select name="day">                  
-                                            <option value="00">Día:</option>
+                                            <option value="00">D&iacute;a:</option>
 					 <?php
                                         $fechaInicio="1";
                                         $fechaFin= "31";
@@ -208,7 +208,7 @@ include 'Entity/PersonalUserEO.php';
 						<option value="12" <?php echo($month=="12")? "selected":'';?>>Diciembre</option>
 					</select>
 					<select name="year">
-				    <option value="0000">Año:</option>
+                                            <option value="0000">A&ntilde;o:</option>
                                            <?php
                                             $fechaInicio="1910";
                                             $fechaFin= "2012";
@@ -224,7 +224,7 @@ include 'Entity/PersonalUserEO.php';
                                                ?>
 					</select>
 				</div>
-                                <div class="privateRegText"> Al hacer clic en <strong>"Regístrate"</strong> estas de acuerdo con nuestras condiciones y aceptas haber le&iacute;ado y comprendido nuestra <a href="#">Política de Privacidad</a> </div>
+                                <div class="privateRegText"> Al hacer clic en <strong>"Regístrate"</strong> estas de acuerdo con nuestras condiciones y aceptas haber le&iacute;ado y comprendido nuestra <a href="#">Pol&iacute;tica de Privacidad</a> </div>
                                 <input type="submit" id="btnRegistrame" name="btnRegistrame" class="submitReg gradients-button-register" value="¡Reg&iacute;strame!" />
                                 <?php if(!$ifSend){echo "<div class='msgError'><div class='bothContainer'><img src='Images/icons/warning.png' alt='Alert'/><label>{$message}</label></div></div>";} ?>  
 			</form>
