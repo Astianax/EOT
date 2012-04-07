@@ -21,9 +21,9 @@ include 'Entity/PersonalUserEO.php';
         }else if(isset($_POST['btnRegistrame'])&& ($_POST['year']=="0000" || $_POST['month']=="00" || $_POST['day']=="00")){
              $ifSend=false;
             $message="Debes seleccionar tu fecha";
-        }else if(!preg_match("^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$", $_POST['textEmail'])){
+        }else if(trim($_POST['txtEmail'])!=""&& !preg_match("/^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/", $_POST['txtEmail'])){
             $message="Correo invalido";
-            $isSend=false;
+            $ifSend=false;
         }
         else if($ifSend){
             $personalUser->save();
