@@ -65,18 +65,13 @@ class PersonalUser
             }else{
             }
         }
-<<<<<<< HEAD
     }
-        }
-    }  
+       
     
-      function save()
-    {
-=======
-       }  
+     
        function save()
         {
->>>>>>> origin/master
+
         if($this->id==0)
         {
                 $sql="INSERT INTO `PersonalUser`(
