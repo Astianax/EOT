@@ -37,8 +37,8 @@
             $messageLogin="Debes introducir correo y contraseña";
             
       }else if(isset($_POST['btnEntrar'])){
-        $email=$_POST['username'];
-        $password=$_POST['password'];
+        $email=mysql_real_scape_string(trim($_POST['username']));
+        $password=mysql_real_escape_string(trim($_POST['password']));
             
         $personalUser->authenticateUser($email, $password);
         

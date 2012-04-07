@@ -53,7 +53,6 @@ class PersonalUser
         if (!$rs){
                header("Location:./");
             }
-//        if(mysql_num_rows($rs)==1){
 
             if(mysql_num_rows($rs)>=1){
 
