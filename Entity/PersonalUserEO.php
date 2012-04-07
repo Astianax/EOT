@@ -65,7 +65,10 @@ class PersonalUser
         }else{
         }
     }
-    function save()
+        }
+    }  
+    
+      function save()
     {
         if($this->id==0)
         {
@@ -178,6 +181,4 @@ class PersonalUser
                             mysql_query($sql);               
                 }
             }
-        }
-    }    
  }
