@@ -15,7 +15,7 @@ include 'Entity/PersonalUserEO.php';
             $message = "Debes llenar todos los campos";
         }else if(isset($_POST['btnRegistrame'])&& $_POST['txtPassword']!=$_POST['txtPassAgain']){
             $ifSend=false;
-            $message="Las contraseñas son desiguales";
+            $message="Las contrase&ntilde;as son desiguales";
         }else if(isset($_POST['btnRegistrame'])&& empty($_POST['txtPassword']) || empty($_POST['txtPassAgain'])){
             $ifSend=false;
             $message="Debes llenar todos los campos";
@@ -81,7 +81,7 @@ include 'Entity/PersonalUserEO.php';
 	<header id="header" class="gradients-gray shadow-slow1">
 		<div id="search">
 			<form>
-				<input type="text" name="searchText" class="searchText" placeholder="Busqueda..."/>
+                            <input type="text" name="searchText" class="searchText" placeholder="B&uacute;squeda..."/>
 			</form>
 		</div>
 		<!--LOGO-->
@@ -91,7 +91,7 @@ include 'Entity/PersonalUserEO.php';
                 <form id="formLogin" name="formLogin" method="POST" action="">
                     <div id="login">
                             <ul class="itemsLoginTop">
-                                    <li><a href="#">¿Se te olvidó la clave?</a></li>
+                                <li><a href="#">¿Se te olvid&oacute; la clave?</a></li>
                                     <li class="last"><a href="#">Ayuda</a></li>
 <!--                                    <div class="clear"></div>-->
                             </ul>
@@ -99,12 +99,12 @@ include 'Entity/PersonalUserEO.php';
                             <ul class="itemsLogin">
                                     <li> <span>
                                             <input type="checkbox" name="active" id="active" class="active" />
-                                            <label for="active">Mantener mi sesión activada</label>
+                                            <label for="active">Mantener mi sesi&oacute;n activada</label>
                                             </span>
-                                            <input type="text" name="username" class="user" placeholder="Correo Electrónico" />
+                                            <input type="text" name="username" class="user" placeholder="Correo Electr&oacute;nico" />
                                     </li>
                                     <li>
-                                            <input type="password" name="password" class="pass" placeholder="Contraseña" />
+                                        <input type="password" name="password" class="pass" placeholder="Contrase&ntilde;a" />
                                     </li>
                                    
                                     <li>  <button class="tranparent" type="submit" id="btnEntrar" name="btnEntrar"> <img src="images/icons/iconLogin.png"/></buton> </li>
@@ -155,14 +155,14 @@ include 'Entity/PersonalUserEO.php';
 				<span class="descReg">Forma parte de <b>EOTrailer</b> y disfruta con tus amigos!</span>
 				<label for="textName"><b>Nombre</b></label>
                                 <input type="text" id="textName" class="textReg border-radius10" name="txtName" value="<?php echo $personalUser->userName; ?>"/>
-				<label for="textEmail"><b>Correo Electrónico</b></label>
+                                <label for="textEmail"><b>Correo Electr&oacute;nico</b></label>
 				<input type="text" id="textEmail" class="textReg border-radius10" name="txtEmail" value="<?php echo $personalUser->email; ?>"/>
-				<label for="textPass"><b>Introduzca su contraseña</b></label>
+                                <label for="textPass"><b>Introduzca su contrase&ntilde;a</b></label>
 				<input type="password" id="textPass" class="textReg border-radius10" name="txtPassword" value="<?php echo $personalUser->password; ?>"/>
-				<label for="textPassAgain"><b>Introduzca de nuevo su contraseña</b>
+                                <label for="textPassAgain"><b>Introduzca de nuevo su contrase&ntilde;a</b>
 				<input type="password" id="textPassAgain" class="textReg border-radius10" name="txtPassAgain" value="<?php echo $personalUser->password; ?>"/>
                                 </label>
-				<div><strong>¿Cuál es tu sexo?</strong>
+                                <div><strong>¿Cu&aacute;l es tu sexo?</strong>
 					<input type="radio" name="rbnGender" value="Mujer" id="female" class="sexReg" <?php echo ($personalUser->gender=="Mujer")?"checked":""?> />
 					<label for="female" class="sexReg">Mujer</label>
 					<input type="radio" name="rbnGender" value="Hombre" id="male" clas="sexReg" <?php echo ($personalUser->gender=="Hombre")?"checked":""?>/>
@@ -170,6 +170,7 @@ include 'Entity/PersonalUserEO.php';
 				</div>
 				<div class="birthDate"><strong>Fecha de Nacimiento</strong></div>
 				<div>
+                                    <!--asd-->
 					<select name="day">                  
                                             <option value="00">Día:</option>
 					 <?php
@@ -223,8 +224,8 @@ include 'Entity/PersonalUserEO.php';
                                                ?>
 					</select>
 				</div>
-				<div class="privateRegText"> Al hacer clic en <strong>"Regístrate"</strong> estas de acuerdo con nuestras condiciones y aceptas haber leído y comprendido nuestra <a href="#">Política de Privacidad</a> </div>
-                                <input type="submit" id="btnRegistrame" name="btnRegistrame" class="submitReg gradients-button-register" value="¡Regístrame!" />
+                                <div class="privateRegText"> Al hacer clic en <strong>"Regístrate"</strong> estas de acuerdo con nuestras condiciones y aceptas haber le&iacute;ado y comprendido nuestra <a href="#">Política de Privacidad</a> </div>
+                                <input type="submit" id="btnRegistrame" name="btnRegistrame" class="submitReg gradients-button-register" value="¡Reg&iacute;strame!" />
                                 <?php if(!$ifSend){echo "<div class='msgError'><div class='bothContainer'><img src='Images/icons/warning.png' alt='Alert'/><label>{$message}</label></div></div>";} ?>  
 			</form>
 		</section>
@@ -235,7 +236,7 @@ include 'Entity/PersonalUserEO.php';
 	<footer id="footer" class="shadow-slow1">
 		<nav>
 			<ul>
-				<li class="eoCopy"><a href="#">© EOTrailer 2012. </a></li>
+                            <li class="eoCopy"><a href="#">&copy; EOTrailer 2012. </a></li>
 				<li><a href="#">Sobre nosotros</a></li>
 				<li><a href="#">Ayuda</a></li>
 				<li><a href="#">Blog</a></li>
