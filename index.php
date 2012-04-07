@@ -164,53 +164,54 @@ include 'Entity/PersonalUserEO.php';
 				<div class="birthDate"><strong>Fecha de Nacimiento</strong></div>
 				<div>
 					<select name="day">
-						<option value="00">Día:</option>
-						<option value="01">1</option>
-						<option value="02">2</option>
-						<option value="03">3</option>
-						<option value="04">4</option>
-						<option value="05">5</option>
-						<option value="06">6</option>
-						<option value="07">7</option>
-						<option value="08">8</option>
-						<option value="09">9</option>
-						<option value="10">10</option>
-						<option value="11">11</option>
-						<option value="12">12</option>
-						<option value="13">13</option>
-						<option value="14">14</option>
-						<option value="15">15</option>
-						<option value="16">16</option>
-						<option value="17">17</option>
-						<option value="18">18</option>
-						<option value="19">19</option>
-						<option value="20">20</option>
-						<option value="21">21</option>
-						<option value="22">22</option>
-						<option value="23">23</option>
-						<option value="24">24</option>
-						<option value="25">25</option>
-						<option value="26">26</option>
-						<option value="27">27</option>
-						<option value="28">28</option>
-						<option value="29">29</option>
-						<option value="30">30</option>
-						<option value="31">31</option>
+                  
+                                            <option value="00">Día:</option>
+						<option value="01" <?php echo($_POST['day']=="01")? "selected":'';?>>1</option>
+						<option value="02" <?php echo($_POST['day']=="02")? "selected":'';?>>2</option>
+						<option value="03" <?php echo($_POST['day']=="03")? "selected":'';?>>3</option>
+						<option value="04" <?php echo($_POST['day']=="04")? "selected":'';?>>4</option>
+						<option value="05" <?php echo($_POST['day']=="05")? "selected":'';?>>5</option>
+						<option value="06" <?php echo($_POST['day']=="06")? "selected":'';?>>6</option>
+						<option value="07" <?php echo($_POST['day']=="07")? "selected":'';?>>7</option>
+						<option value="08" <?php echo($_POST['day']=="08")? "selected":'';?>>8</option>
+						<option value="09" <?php echo($_POST['day']=="09")? "selected":'';?>>9</option>
+						<option value="10" <?php echo($_POST['day']=="10")? "selected":'';?>>10</option>
+						<option value="11" <?php echo($_POST['day']=="11")? "selected":'';?>>11</option>
+						<option value="12" <?php echo($_POST['day']=="12")? "selected":'';?>>12</option>
+						<option value="13" <?php echo($_POST['day']=="13")? "selected":'';?>>13</option>
+						<option value="14" <?php echo($_POST['day']=="14")? "selected":'';?>>14</option>
+						<option value="15" <?php echo($_POST['day']=="15")? "selected":'';?>>15</option>
+						<option value="16" <?php echo($_POST['day']=="16")? "selected":'';?>>16</option>
+						<option value="17" <?php echo($_POST['day']=="17")? "selected":'';?>>17</option>
+						<option value="18" <?php echo($_POST['day']=="18")? "selected":'';?>>18</option>
+						<option value="19" <?php echo($_POST['day']=="19")? "selected":'';?>>19</option>
+						<option value="20" <?php echo($_POST['day']=="20")? "selected":'';?>>20</option>
+						<option value="21" <?php echo($_POST['day']=="21")? "selected":'';?>>21</option>
+						<option value="22" <?php echo($_POST['day']=="22")? "selected":'';?>>22</option>
+						<option value="23" <?php echo($_POST['day']=="23")? "selected":'';?>>23</option>
+						<option value="24" <?php echo($_POST['day']=="24")? "selected":'';?>>24</option>
+						<option value="25" <?php echo($_POST['day']=="25")? "selected":'';?>>25</option>
+						<option value="26" <?php echo($_POST['day']=="26")? "selected":'';?>>26</option>
+						<option value="27" <?php echo($_POST['day']=="27")? "selected":'';?>>27</option>
+						<option value="28" <?php echo($_POST['day']=="28")? "selected":'';?>>28</option>
+						<option value="29" <?php echo($_POST['day']=="29")? "selected":'';?>>29</option>
+						<option value="30" <?php echo($_POST['day']=="30")? "selected":'';?>>30</option>
+						<option value="31" <?php echo($_POST['day']=="31")? "selected":'';?>>31</option>
 					</select>
 					<select name="month">
 						<option value="00">Mes:</option>
-						<option value="01">enero</option>
-						<option value="02">febrero</option>
-						<option value="03">marzo</option>
-						<option value="04">abril</option>
-						<option value="05">mayo</option>
-						<option value="06">junio</option>
-						<option value="07">julio</option>
-						<option value="08">agosto</option>
-						<option value="09">septiembre</option>
-						<option value="10">octubre</option>
-						<option value="11">noviembre</option>
-						<option value="12">diciembre</option>
+						<option value="01" <?php echo($_POST['month']=="01")? "selected":'';?>>Enero</option>
+						<option value="02" <?php echo($_POST['month']=="02")? "selected":'';?>>Febrero</option>
+						<option value="03" <?php echo($_POST['month']=="03")? "selected":'';?>>Marzo</option>
+						<option value="04" <?php echo($_POST['month']=="04")? "selected":'';?>>Abril</option>
+						<option value="05" <?php echo($_POST['month']=="05")? "selected":'';?>>Mayo</option>
+						<option value="06" <?php echo($_POST['month']=="06")? "selected":'';?>>Junio</option>
+						<option value="07" <?php echo($_POST['month']=="07")? "selected":'';?>>Julio</option>
+						<option value="08" <?php echo($_POST['month']=="08")? "selected":'';?>>Agosto</option>
+						<option value="09" <?php echo($_POST['month']=="09")? "selected":'';?>>Septiembre</option>
+						<option value="10" <?php echo($_POST['month']=="10")? "selected":'';?>>Octubre</option>
+						<option value="11" <?php echo($_POST['month']=="11")? "selected":'';?>>Noviembre</option>
+						<option value="12" <?php echo($_POST['month']=="12")? "selected":'';?>>Diciembre</option>
 					</select>
 					<select name="year">
 						<option value="0000">Año:</option>
