@@ -190,7 +190,7 @@ include 'Entity/PersonalUserEO.php';
 						<option value="22" <?php echo($_POST['day']=="22")? "selected":'';?>>22</option>
 						<option value="23" <?php echo($_POST['day']=="23")? "selected":'';?>>23</option>
 						<option value="24" <?php echo($_POST['day']=="24")? "selected":'';?>>24</option>
-						<option value="25" <?php echo($_POST['day']=="25")? "selected":'';?>>25</option>
+					<option value="25" <?php echo($_POST['day']=="25")? "selected":'';?>>25</option>
 						<option value="26" <?php echo($_POST['day']=="26")? "selected":'';?>>26</option>
 						<option value="27" <?php echo($_POST['day']=="27")? "selected":'';?>>27</option>
 						<option value="28" <?php echo($_POST['day']=="28")? "selected":'';?>>28</option>
