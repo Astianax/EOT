@@ -133,9 +133,9 @@ include 'Entity/PersonalUserEO.php';
 	<section id="content">
 		<!--Four(4) section Eotrailer (Business, Entertaiment, Personal and Community ) -->		
 		<section id="eoThemes" class="border-radius10">
-			<ul>
-				<li class="profile border-radius10"><a href="#" class="escaleHover1dot15 transition-dot5"></a></li>
+			<ul>//jkhjhkjhkj				
 				<li class="entertainment border-radius10 last"><a href="#" class="escaleHover1dot15 transition-dot5"></a></li>
+                                <li class="profile border-radius10"><a href="#" class="escaleHover1dot15 transition-dot5"></a></li>
 				<li class="business border-radius10 "><a href="#" class="escaleHover1dot15 transition-dot5"></a></li>
 				<li class="comunity border-radius10 last"><a href="#" class="escaleHover1dot15 transition-dot5"></a></li>
 				<div class="clear"></div>

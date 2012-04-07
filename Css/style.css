@@ -115,16 +115,20 @@
 	top:50%;
 	margin:-56px auto 0 auto;
 	text-decoration:none;
-	background: url(../images/icons/socialsIcons.png) 0 0 no-repeat;
 }
 #eoThemes li.entertainment a {
-	background: url(../images/icons/socialsIcons.png) 0 right no-repeat;
+	background: url(../images/icons/entertainment.gif) 0 0 no-repeat;
 }
+
+#eoThemes li.profile a {
+	background: url(../images/icons/personal.gif) 0 0 no-repeat;
+}
+
 #eoThemes li.business a {
-	background: url(../images/icons/socialsIcons.png) 0 right no-repeat;
+	background: url(../images/icons/business.gif) 0 0 no-repeat;
 }
 #eoThemes li.comunity a {
-	background: url(../images/icons/socialsIcons.png) 0 right no-repeat;
+	background: url(../images/icons/comunity.gif) 0 0 no-repeat;
 }
 /****************
  SLIDER BANNER
