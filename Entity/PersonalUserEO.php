@@ -47,17 +47,22 @@ class PersonalUser
         $this->password= mysql_real_escape_string($password);
         $sql="SELECT email, password FROM `PersonalUser` WHERE `email`='{$email}' AND `password`=md5('{$password}')";
         $rs=mysql_query($sql);
+<<<<<<< HEAD
         if(mysql_num_rows($rs)==1){
  
         if (!$rs){
                header("Location:./");
             }
         if(mysql_num_rows($rs)==1){
+=======
+        if(mysql_num_rows($rs)>=1){
+>>>>>>> origin/master
             $row=mysql_fetch_assoc($rs);
             $this->email=$row['email'];
             $this->password=$row['password'];
             $this->id=$row['id'];
             $this->authenticated=true;     
+        }else{
         }
     }
     function save()
