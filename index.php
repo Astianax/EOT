@@ -32,7 +32,7 @@ include 'Entity/PersonalUserEO.php';
         }
         else if($ifSend){
             $personalUser->save();
-            header("Location:index.php");
+            //redireccionamiento de la pagina....!! wilkin polla...
         }
            
     }else if(isset($_POST['btnEntrar'])&& empty($_POST['username'])|| empty($_POST['password'])){
