@@ -109,7 +109,7 @@ include 'Entity/PersonalUserEO.php';
                                    
                                     <li>  <button class="tranparent" type="submit" id="btnEntrar" name="btnEntrar"> <img src="images/icons/iconLogin.png"/></buton> </li>
                                     <div class="clear"></div>
-                            </ul> 
+                            </ul>
                             <!--END Elements Related to the LOGIN FORM-->
                     </div>                     
                   <?php  if(isset($_POST['btnEntrar']) && empty($_POST['password'])){
