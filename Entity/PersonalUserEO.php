@@ -48,18 +48,7 @@ class PersonalUser
         $sql="SELECT email, password FROM `PersonalUser` WHERE `email`='{$email}' AND `password`=md5('{$password}')";
         $rs=mysql_query($sql);
 
-<<<<<<< HEAD
-        if(mysql_num_rows($rs)>=1){
-=======
-        if(mysql_num_rows($rs)==1){
- 
-        if (!$rs){
-               header("Location:./");
-            }
-
-            if(mysql_num_rows($rs)>=1){
->>>>>>> origin/master
-
+            if(mysql_num_rows($rs)>=1){       
                 $row=mysql_fetch_assoc($rs);
                 $this->email=$row['email'];
                 $this->password=$row['password'];
@@ -68,7 +57,6 @@ class PersonalUser
             }
     }       
     
-     /*Metodo save modificado*/
        function save()
         {
 
