@@ -44,6 +44,9 @@
         
         if($personalUser->authenticated==true){
             header("Location:Bienvenido.php");
+        }else if(isset($_POST['btnEntrar'])){
+            $ifSend=false;
+            $messageValid="El usuario y/o contraseña son invalidos";
         }
     }
 ?>
@@ -115,6 +118,8 @@
               echo "<label class='logError'>$messageLogin</label>";
           }else if(isset($_POST['btnEntrar']) && empty($_POST['username'])){
               echo "<label class='logError'>$messageLogin</label>";
+          }else if(isset($_POST['btnEntrar']) && $personalUser->authenticated==false){
+              echo "<label class='logError'>$messageValid</label>";              
           }
           ?>
         </form>
@@ -173,7 +178,6 @@
 				</div>
 				<div class="birthDate"><strong>Fecha de Nacimiento</strong></div>
 				<div>
-                                    <!--asd-->
 					<select name="day">                  
                                         <option value="00">D&iacute;a:</option>
 					 <?php
@@ -194,7 +198,7 @@
                                               <?php
                                               $month=substr($personalUser->birthday, 4,-2);
                                               ?>
-						<option value="01" <?php echo ($month=="01")? "selected":'';?>>Enero</option>
+						<option value="01" <?php echo($month=="01")? "selected":'';?>>Enero</option>
 						<option value="02" <?php echo($month=="02")? "selected":'';?>>Febrero</option>
 						<option value="03" <?php echo($month=="03")? "selected":'';?>>Marzo</option>
 						<option value="04" <?php echo($month=="04")? "selected":'';?>>Abril</option>
