@@ -47,8 +47,6 @@ class PersonalUser
         $this->password= mysql_real_escape_string($password);
         $sql="SELECT email, password FROM `PersonalUser` WHERE `email`='{$email}' AND `password`=md5('{$password}')";
         $rs=mysql_query($sql);
-        if (!$rs){
-        };
         if(mysql_num_rows($rs)>=1){
             $row=mysql_fetch_assoc($rs);
             $this->email=$row['email'];
