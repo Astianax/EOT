@@ -4,7 +4,6 @@ include 'Entity/PersonalUserEO.php';
     $ifSend = true;
     $message="";
     $messageLogin="";
-    //Jairo Pavel Veloz Vidal
     if(isset($_POST['btnRegistrame'])){
         $personalUser->userName=mysql_real_escape_string(trim($_POST['txtName']));
         $personalUser->email=mysql_real_escape_string(trim($_POST['txtEmail']));
