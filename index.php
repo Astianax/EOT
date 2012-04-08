@@ -147,18 +147,18 @@ include 'Entity/PersonalUserEO.php';
 				<h2>Registrate!</h2>
 				<span class="descReg">Forma parte de <b>EOTrailer</b> y disfruta con tus amigos!</span>
 				<label for="textName"><b>Nombre</b></label>
-                                <input type="text" id="textName" class="textReg border-radius10" name="txtName"/>
+                                <input type="text" id="textName" class="textReg border-radius10" name="txtName" value="<?php echo $personalUser->userName; ?>"/>
 				<label for="textEmail"><b>Correo Electrónico</b></label>
-				<input type="text" id="textEmail" class="textReg border-radius10" name="txtEmail"/>
+				<input type="text" id="textEmail" class="textReg border-radius10" name="txtEmail" value="<?php echo $personalUser->email; ?>"/>
 				<label for="textPass"><b>Introduzca su contraseña</b></label>
 				<input type="password" id="textPass" class="textReg border-radius10" name="txtPassword"/>
 				<label for="textPassAgain"><b>Introduzca de nuevo su contraseña</b>
 				<input type="password" id="textPassAgain" class="textReg border-radius10" name="txtPassAgain"/>
                                 </label>
 				<div><strong>¿Cuál es tu sexo?</strong>
-					<input type="radio" name="rbnGender" value="Mujer" id="female" class="sexReg" />
+					<input type="radio" name="rbnGender" value="Mujer" id="female" class="sexReg" <?php echo ($personalUser->gender=="Mujer")?"checked":""?> />
 					<label for="female" class="sexReg">Mujer</label>
-					<input type="radio" name="rbnGender" value="Hombre" id="male" clas="sexReg" />
+					<input type="radio" name="rbnGender" value="Hombre" id="male" clas="sexReg" <?php echo ($personalUser->gender=="Hombre")?"checked":""?>/>
 					<label for="male" class="sexReg"> Hombre</label>
 				</div>
 				<div class="birthDate"><strong>Fecha de Nacimiento</strong></div>
