@@ -11,11 +11,16 @@ include 'Entity/PersonalUserEO.php';
         $personalUser->password=mysql_real_escape_string(trim($_POST['txtPassword']));
         $personalUser->gender=isset($_POST['rbnGender'])?$_POST['rbnGender']:false;
         $personalUser->birthday= mysql_real_escape_string(trim($_POST['year'].$_POST['month'].$_POST['day']));
-        if(isset($_POST['btnRegistrame']) && (empty($_POST['txtName']) || empty($_POST['txtEmail']) || empty($_POST['txtPassword']))){
+        if(isset($_POST['btnRegistrame']) && (empty($_POST['txtName']) || empty($_POST['txtEmail']))){
             $ifSend = false;
             $message = "Debes llenar todos los campos";
-        }
-        else if(isset($_POST['btnRegistrame'])&& !isset($_POST['rbnGender']) ){
+        }else if(isset($_POST['btnRegistrame'])&& $_POST['txtPassword']!=$_POST['txtPassAgain']){
+            $ifSend=false;
+            $message="Las contraseñas son desiguales";
+        }else if(isset($_POST['btnRegistrame'])&& empty($_POST['txtPassword']) || empty($_POST['txtPassAgain'])){
+            $ifSend=false;
+            $message="Debes llenar todos los campos";
+        }else if(isset($_POST['btnRegistrame'])&& !isset($_POST['rbnGender']) ){
             $ifSend=false;
             $message="Debes seleccionar tu sexo";
         }else if(isset($_POST['btnRegistrame'])&& ($_POST['year']=="0000" || $_POST['month']=="00" || $_POST['day']=="00")){
@@ -27,17 +32,20 @@ include 'Entity/PersonalUserEO.php';
         }
         else if($ifSend){
             $personalUser->save();
+            header("Location:index.php");
         }
            
-    }else if(isset($_POST['btnEntrar'])){
+    }else if(isset($_POST['btnEntrar'])&& empty($_POST['username'])|| empty($_POST['password'])){
+            $messageLogin="Debes introducir correo y contraseña";
+            
+      }else if(isset($_POST['btnEntrar'])){
         $email=$_POST['username'];
         $password=$_POST['password'];
-
-             $personalUser->authenticateUser($email, $password);
+            
+        $personalUser->authenticateUser($email, $password);
+        
         if($personalUser->authenticated==true){
             header("Location:Bienvenido.php");
-        }else if(isset($_POST['btnEntrar'])&& empty($_POST['username'])|| empty($_POST['password'])){
-            $messageLogin="Debes introducir correo y contraseña";
         }
     }
 ?>
@@ -151,9 +159,9 @@ include 'Entity/PersonalUserEO.php';
 				<label for="textEmail"><b>Correo Electrónico</b></label>
 				<input type="text" id="textEmail" class="textReg border-radius10" name="txtEmail" value="<?php echo $personalUser->email; ?>"/>
 				<label for="textPass"><b>Introduzca su contraseña</b></label>
-				<input type="password" id="textPass" class="textReg border-radius10" name="txtPassword"/>
+				<input type="password" id="textPass" class="textReg border-radius10" name="txtPassword" value="<?php echo $personalUser->password; ?>"/>
 				<label for="textPassAgain"><b>Introduzca de nuevo su contraseña</b>
-				<input type="password" id="textPassAgain" class="textReg border-radius10" name="txtPassAgain"/>
+				<input type="password" id="textPassAgain" class="textReg border-radius10" name="txtPassAgain" value="<?php echo $personalUser->password; ?>"/>
                                 </label>
 				<div><strong>¿Cuál es tu sexo?</strong>
 					<input type="radio" name="rbnGender" value="Mujer" id="female" class="sexReg" <?php echo ($personalUser->gender=="Mujer")?"checked":""?> />
