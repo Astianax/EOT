@@ -170,7 +170,6 @@ include 'Entity/PersonalUserEO.php';
 				</div>
 				<div class="birthDate"><strong>Fecha de Nacimiento</strong></div>
 				<div>
-                                    <!--asd-->
 					<select name="day">                  
                                             <option value="00">Día:</option>
 					 <?php
