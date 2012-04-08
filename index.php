@@ -4,7 +4,7 @@
     $ifSend = true;
     $message="";
     $messageLogin="";
-    $userDate = array("","","");mmm
+    $userDate = array("","","");
     if(isset($_POST['btnRegistrame'])){
         $personalUser->userName=mysql_real_escape_string(trim($_POST['txtName']));
         $personalUser->email=mysql_real_escape_string(trim($_POST['txtEmail']));
