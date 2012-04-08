@@ -53,20 +53,21 @@ class PersonalUser
         if (!$rs){
                header("Location:./");
             }
-        if(mysql_num_rows($rs)==1){
+//        if(mysql_num_rows($rs)==1){
 
-        if(mysql_num_rows($rs)>=1){
+            if(mysql_num_rows($rs)>=1){
 
-            $row=mysql_fetch_assoc($rs);
-            $this->email=$row['email'];
-            $this->password=$row['password'];
-            $this->id=$row['id'];
-            $this->authenticated=true;     
-        }else{
+                $row=mysql_fetch_assoc($rs);
+                $this->email=$row['email'];
+                $this->password=$row['password'];
+                $this->id=$row['id'];
+                $this->authenticated=true;     
+            }else{
+            }
         }
-    }
-    function save()
-    {
+       }  
+       function save()
+        {
         if($this->id==0)
         {
                 $sql="INSERT INTO `PersonalUser`(
@@ -174,10 +175,7 @@ class PersonalUser
                             `interest`='{$this->interest}',
                             `userName`='{$this->userName}'
                             where `id`='{$this->id}'";
-
                             mysql_query($sql);               
                 }
             }
-        }
-    }    
  }
