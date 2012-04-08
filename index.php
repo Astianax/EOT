@@ -112,8 +112,14 @@ include 'Entity/PersonalUserEO.php';
                             </ul>  
                             
                             <!--END Elements Related to the LOGIN FORM-->
-                    </div>
-                    <?php if(isset($_POST['btnEntrar'])  && empty($_POST['username']) || empty($_POST['password'])){echo "<label class='logError'>{$messageLogin}</label>";} ?>
+                    </div>       
+                    
+                  <?php  if(isset($_POST['btnEntrar']) && empty($_POST['password'])){
+                      echo "<label class='logError'>$messageLogin</label>";
+                  }else if(isset($_POST['btnEntrar']) && empty($_POST['username'])){
+                      echo "<label class='logError'>$messageLogin</label>";
+                  } 
+                  ?>
                 </form>    
 		<!--End Login Form-->
 		<div class="clear"></div>
