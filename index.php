@@ -1,5 +1,5 @@
 <?php 
-include 'Entity/PersonalUserEO.php';
+    include 'Entity/PersonalUserEO.php';
     $personalUser = new PersonalUser();
     $ifSend = true;
     $message="";
@@ -31,7 +31,6 @@ include 'Entity/PersonalUserEO.php';
         }
         else if($ifSend){
             $personalUser->save();
-            //redireccionamiento de la pagina....!! wilkin polla...
         }
            
     }else if(isset($_POST['btnEntrar'])&& empty($_POST['username'])|| empty($_POST['password'])){
@@ -107,7 +106,7 @@ include 'Entity/PersonalUserEO.php';
                                         <input type="password" name="password" class="pass" placeholder="Contrase&ntilde;a" />
                                     </li>
                                    
-                                    <li>  <button class="tranparent" type="submit" id="btnEntrar" name="btnEntrar"> <img src="images/icons/iconLogin.png"/></buton> </li>
+                                    <li>  <button class="tranparent" type="submit" id="btnEntrar" name="btnEntrar"> <img src="images/icons/iconLogin.png" alt=""/></button> </li>
                                     <div class="clear"></div>
                             </ul>
                             <!--END Elements Related to the LOGIN FORM-->
@@ -124,7 +123,7 @@ include 'Entity/PersonalUserEO.php';
 	</header>
 	<!--END Header container-->
 	<!--FESTIVE Day Message-->
-	<div id="msgDay" class="shadow-slow3" hidden="hidden"><strong>Muere steve jobs</strong>, Les informa <b>EOTrailer</b>
+	<div id="msgDay" class="shadow-slow3" hidden="hidden"><strong>Muere Steve Jobs</strong>, Les informa <b>EOTrailer</b>
 	</div>
 	<!--END FESTIVE Day Message-->
 	
@@ -155,7 +154,7 @@ include 'Entity/PersonalUserEO.php';
 		<!--REGISTER Box Right-->
 		<section id="register" class="shadow-slow2 border-radius10<?php if($ifSend){echo ' noError';}else{echo ' onError';} ?>">
                     <form action="" method="POST">
-				<h2>Registrate!</h2>
+				<h2>Reg&iacute;strate!</h2>
 				<span class="descReg">Forma parte de <b>EOTrailer</b> y disfruta con tus amigos!</span>
 				<label for="textName"><b>Nombre</b></label>
                                 <input type="text" id="textName" class="textReg border-radius10" name="txtName" value="<?php echo $personalUser->userName; ?>"/>
@@ -170,13 +169,13 @@ include 'Entity/PersonalUserEO.php';
 					<input type="radio" name="rbnGender" value="Mujer" id="female" class="sexReg" <?php echo ($personalUser->gender=="Mujer")?"checked":""?> />
 					<label for="female" class="sexReg">Mujer</label>
 					<input type="radio" name="rbnGender" value="Hombre" id="male" clas="sexReg" <?php echo ($personalUser->gender=="Hombre")?"checked":""?>/>
-					<label for="male" class="sexReg"> Hombre</label>
+					<label for="male" class="sexReg">Hombre</label>
 				</div>
 				<div class="birthDate"><strong>Fecha de Nacimiento</strong></div>
 				<div>
                                     <!--asd-->
 					<select name="day">                  
-                                            <option value="00">D&iacute;a:</option>
+                                        <option value="00">D&iacute;a:</option>
 					 <?php
                                         $fechaInicio="1";
                                         $fechaFin= "31";
