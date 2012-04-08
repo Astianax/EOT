@@ -50,78 +50,78 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="viewport" content="width=500, initial-scale=1">
-<title>EOTrailer ::: Tu red</title>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=500, initial-scale=1">
+        <title>EOTrailer ::: Tu red</title>
 
-<!--Cascading StyleSheet CSS NO TOCAR AL MENOS QUE SEA NECESARIO, esto incluye el fichero que nimporta a su vez los ficheros .css-->
-<link href="css/general.css" rel="stylesheet" />
+        <!--Cascading StyleSheet CSS NO TOCAR AL MENOS QUE SEA NECESARIO, esto incluye el fichero que nimporta a su vez los ficheros .css-->
+        <link href="css/general.css" rel="stylesheet" />
 
-<!--Script Javascript NO SE DEBEN TOCAR A MENOS QUE SEA NECESARIO-->
-<script src="scripts/jquery-1.7.2.min.js"></script>
-<script src="scripts/modernizr-2.5.3.js"></script>
-<script src="scripts/effect.js"></script>
-<!--END Script Javascript-->
-<!--[if gte IE 9]>
-  <style type="text/css">
-    .gradient {filter: none;}
-  </style>
-<![endif]-->
-</head>
+        <!--Script Javascript NO SE DEBEN TOCAR A MENOS QUE SEA NECESARIO-->
+        <script src="scripts/jquery-1.7.2.min.js"></script>
+        <script src="scripts/modernizr-2.5.3.js"></script>
+        <script src="scripts/effect.js"></script>
+        <!--END Script Javascript-->
+        <!--[if gte IE 9]>
+          <style type="text/css">
+            .gradient {filter: none;}
+          </style>
+        <![endif]-->
+    </head>
 <body>
 <!--Container main content structure-->
 <div id="container">	
-	<!--FESTIVE Day IMAGE BACKGROUND-->
-	<div class="backImg"><img src="images/imagenes/002.jpg" alt="Steve Jobs" /></div>
-	<!--END FESTIVE Day IMAGE BACKGROUND-->
-	<!--Header container-->
-        <!--Esas clases son las culpables de la transparencia-->
-	<header id="header" class="gradients-gray shadow-slow1">
-		<div id="search">
-			<form>
-                            <input type="text" name="searchText" class="searchText" placeholder="B&uacute;squeda..."/>
-			</form>
-		</div>
-		<!--LOGO-->
-		<div id="logo"> <a href="#"><img src="images/logo.png" /></a> </div>
-		<!--END LOGO-->
-		<!--Login Form-->
-                <form id="formLogin" name="formLogin" method="POST" action="">
-                    <div id="login">
-                            <ul class="itemsLoginTop">
-                                <li><a href="#">¿Se te olvid&oacute; la clave?</a></li>
-                                    <li class="last"><a href="#">Ayuda</a></li>
+    <!--FESTIVE Day IMAGE BACKGROUND-->
+    <div class="backImg"><img src="images/imagenes/002.jpg" alt="Steve Jobs" /></div>
+    <!--END FESTIVE Day IMAGE BACKGROUND-->
+    <!--Header container-->
+    <!--Esas clases son las culpables de la transparencia-->
+    <header id="header" class="gradients-gray shadow-slow1">
+        <div id="search">
+            <form>
+                <input type="text" name="searchText" class="searchText" placeholder="B&uacute;squeda..."/>
+            </form>
+        </div>
+        <!--LOGO-->
+        <div id="logo"> <a href="#"><img src="images/logo.png" /></a> </div>
+        <!--END LOGO-->
+        <!--Login Form-->
+        <form id="formLogin" name="formLogin" method="POST" action="">
+            <div id="login">
+                <ul class="itemsLoginTop">
+                    <li><a href="#">¿Se te olvid&oacute; la clave?</a></li>
+                    <li class="last"><a href="#">Ayuda</a></li>
 <!--                                    <div class="clear"></div>-->
-                            </ul>
-                            <!--Elements Related to the LOGIN FORM-->
-                            <ul class="itemsLogin">
-                                    <li> <span>
-                                            <input type="checkbox" name="active" id="active" class="active" />
-                                            <label for="active">Mantener mi sesi&oacute;n activada</label>
-                                            </span>
-                                            <input type="text" name="username" class="user" placeholder="Correo Electr&oacute;nico" />
-                                    </li>
-                                    <li>
-                                        <input type="password" name="password" class="pass" placeholder="Contrase&ntilde;a" />
-                                    </li>
-                                   
-                                    <li>  <button class="tranparent" type="submit" id="btnEntrar" name="btnEntrar"> <img src="images/icons/iconLogin.png" alt=""/></button> </li>
-                                    <div class="clear"></div>
-                            </ul>
-                            <!--END Elements Related to the LOGIN FORM-->
-                    </div>                     
-                  <?php  if(isset($_POST['btnEntrar']) && empty($_POST['password'])){
-                      echo "<label class='logError'>$messageLogin</label>";
-                  }else if(isset($_POST['btnEntrar']) && empty($_POST['username'])){
-                      echo "<label class='logError'>$messageLogin</label>";
-                  } 
-                  ?>
-                </form>    
-		<!--End Login Form-->
-		<div class="clear"></div>
-	</header>
+                </ul>
+                <!--Elements Related to the LOGIN FORM-->
+                <ul class="itemsLogin">
+                    <li> <span>
+                        <input type="checkbox" name="active" id="active" class="active" />
+                        <label for="active">Mantener mi sesi&oacute;n activada</label>
+                        </span>
+                        <input type="text" name="username" class="user" placeholder="Correo Electr&oacute;nico" />
+                    </li>
+                    <li>
+                        <input type="password" name="password" class="pass" placeholder="Contrase&ntilde;a" />
+                    </li>
+
+                    <li><button class="tranparent" type="submit" id="btnEntrar" name="btnEntrar"> <img src="images/icons/iconLogin.png" alt=""/></button> </li>
+                    <div class="clear"></div>
+                </ul>
+                <!--END Elements Related to the LOGIN FORM-->
+            </div>
+          <?php  if(isset($_POST['btnEntrar']) && empty($_POST['password'])){
+              echo "<label class='logError'>$messageLogin</label>";
+          }else if(isset($_POST['btnEntrar']) && empty($_POST['username'])){
+              echo "<label class='logError'>$messageLogin</label>";
+          }
+          ?>
+        </form>
+        <!--End Login Form-->
+        <div class="clear"></div>
+    </header>
 	<!--END Header container-->
 	<!--FESTIVE Day Message-->
 	<div id="msgDay" class="shadow-slow3" hidden="hidden"><strong>Muere Steve Jobs</strong>, Les informa <b>EOTrailer</b>
@@ -131,14 +131,14 @@
 	<!--BANNERS footer Ads-->
 		
 	<section id="sliderHomeBanners">
-			<ul>
-				<li><img src="images/imagenes/003.jpg" /></li>
-				<li><img src="images/imagenes/003.jpg" /></li>
-				<li><img src="images/imagenes/003.jpg" /></li>
-				<li><img src="images/imagenes/003.jpg" /></li>
-				<li><img src="images/imagenes/003.jpg" /></li>
-				<div class="clear"></div>
-			</ul>
+            <ul>
+                <li><img src="images/imagenes/003.jpg" /></li>
+                <li><img src="images/imagenes/003.jpg" /></li>
+                <li><img src="images/imagenes/003.jpg" /></li>
+                <li><img src="images/imagenes/003.jpg" /></li>
+                <li><img src="images/imagenes/003.jpg" /></li>
+                <div class="clear"></div>
+            </ul>
 	</section>
 	<!--END BANNERS footer Ads-->
 	<section id="content">
