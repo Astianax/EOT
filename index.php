@@ -177,10 +177,7 @@
 					<select name="day">                  
                                         <option value="00">D&iacute;a:</option>
 					 <?php
-                                        $fechaInicio="1";
-                                        $fechaFin= "31";
-
-                                        for($i=$fechaInicio; $i<=$fechaFin; $i++){
+                                        for($i=1; $i<=31; $i++){
                                             $day=substr($personalUser->birthday, 6,8);
                                             if($day==$i && $i<=9 ){                                                                                                          
                                             echo"<option value='0{$i}' selected> ".$i."</option>";                                                 
@@ -213,10 +210,7 @@
 					<select name="year">
                                             <option value="0000">A&ntilde;o:</option>
                                            <?php
-                                            $fechaInicio="1910";
-                                            $fechaFin= "2012";
-                                            
-                                                for($i=$fechaInicio; $i<=$fechaFin; $i++){
+                                                for($i=2012; $i>=1910; $i--){
                                                     $year=substr($personalUser->birthday, 0,4);
                                                     if($year==$i){                                                                                                          
                                                     echo"<option value='{$i}' selected> ".$i."</option>";                                                 
